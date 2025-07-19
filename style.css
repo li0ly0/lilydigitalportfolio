@@ -629,6 +629,15 @@ footer {
 	}
 }
 
+@media (max-width: 320px) {
+  .tab {
+		font-size: 0.3rem;
+		padding: 0.4rem 0.4rem;
+		text-align: center;
+	}
+
+}
+
 #music-toggle {
 	margin-top: 1rem;
 	background: var(--yellow);
