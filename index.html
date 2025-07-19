@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <title>Lily’s Digital Portfolio</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+      <link rel="icon" type="image/png" href="icon.png">
+      <style>
+         .tab-content { display: none; }
+         .tab-content.active { display: block; }
+         .tab.active { background: var(--white); color: black; font-weight: bold; }
+      </style>
+   </head>
+   <body>
+    
+      <div class="container">
+         <div class="tabs-wrapper">
+            <button class="tab active" data-target="home">Home</button>
+            <button class="tab" data-target="about">About</button>
+            <button class="tab" data-target="projects">Projects</button>
+            <button class="tab" data-target="contact">Contact</button>
+         </div>
+
+
+         <!-- HOME -->
+         <section class="tab-content active" id="home">
+            <header class="landing-header">
+               <h1>Lily’s Digital Portfolio</h1>
+               <p class="tagline">Pixel by Pixel. Line by Line.</p>
+               <!-- 🎵 Music Toggle Icon -->
+               <button id="music-toggle" title="Toggle Music">
+               <i class="fas fa-volume-up" id="music-icon"></i>
+               </button>
+            </header>
+         </section>
+         <audio id="bg-music" loop autoplay>
+            <source src="bg.mp3" type="audio/mp3" />
+         </audio>
+
+
+         <!-- ABOUT -->
+         <section class="tab-content" id="about">
+            <div class="about-container">
+               <h2 class="section-title">★ About Me ★</h2>
+               <div class="about-box intro-box">
+                  <div class="intro-image">
+                     <img src="me.jpg" alt="Lily's Photo" class="about-photo">
+                     <p style="font-size: 0.5rem; color: var(--blue); margin-top: 0.5rem;">🌼 Lily / Developer</p>
+                  </div>
+                  <div class="intro-text">
+                     <h2 style="font-size: 0.7rem; color: var(--blue); margin-bottom: 0.5rem;">Hi there! 👋</h2>
+                     <div class="intro-blurb">
+                        <p>
+                           Hi, I’m <span class="intro-highlight">Beverly</span>, but you can call me <span class="intro-highlight">Lily</span>.<br><br>
+                           I’ve been into creating since I was a kid like making games, drawing characters, and designing sprites. In college, I got into programming and started building apps and websites. Now, I code even in my free time and always look forward to learning more.
+                        </p>
+                     </div>
+                  </div>
+               </div>
+               <div class="skills-box">
+                  <h2>🛠 Skills</h2>
+                  <div class="skills-grid">
+                     <span class="skill-button">Python</span>
+                     <span class="skill-button">Java</span>
+                     <span class="skill-button">JavaScript</span>
+                     <span class="skill-button">PHP</span>
+                     <span class="skill-button">HTML</span>
+                     <span class="skill-button">CSS</span>
+                     <span class="skill-button">Bootstrap</span>
+                     <span class="skill-button">WordPress</span>
+                     <span class="skill-button">Figma</span>
+                     <span class="skill-button">Canva</span>
+                     <span class="skill-button">Git</span>
+                     <span class="skill-button">GitHub</span>
+                     <span class="skill-button">Trello</span>
+                     <span class="skill-button">Notion</span>
+                     <span class="skill-button">Excel VBA</span>
+                     <span class="skill-button">Technical Writing</span>
+                     <span class="skill-button">Debugging</span>
+                     <span class="skill-button">Networks</span>
+                     <span class="skill-button">OS</span>
+                     <span class="skill-button">Paint Tool SAI 2</span>
+                     <span class="skill-button">Video Editing</span>
+                  </div>
+               </div>
+               <div class="hobbies-box">
+                  <h2>🎀 Hobbies</h2>
+                  <ul>
+                     <li>🎮 Coding cute and relaxing games</li>
+                     <li>🌐 Making mini websites for fun</li>
+                     <li>🧸 Replaying favorite childhood games</li>
+                     <li>📖 Reading short comics or webtoons</li>
+                     <li>📌 Curating moodboards on Pinterest</li>
+                     <li>🎥 Watching devlogs or design YouTube channels</li>
+                     <li>🎨 Doodling in Paint Tool SAI 2</li>
+                     <li>📓 Journaling or digital scrapbooking</li>
+                  </ul>
+               </div>
+            </div>
+         </section>
+
+
+         <!-- PROJECTS TAB -->
+         <section id="projects" class="tab-content">
+            <div class="projects-container">
+               <h2 class="section-title">★ Sample Projects ★ </h2>
+               <div class="project-card">
+                  <img src="artguardia.png" alt="Project 1 screenshot" class="project-image">
+                  <div class="project-info">
+                     <h3>ArtGuardia</h3>
+                     <p>A tool that protects digital paintings from AI art replication by applying subtle image perturbations that disrupt models like Stable Diffusion. Uses agile methodology.</p>
+                     <br>
+                     <p><strong>Tech:</strong> Python</p>
+                     <a href="#contact" onclick="event.preventDefault(); showTab('contact')">Request Files ➤</a>
+                  </div>
+               </div>
+               <div class="project-card">
+                  <img src="dswd.png" alt="Project 2 screenshot" class="project-image">
+                  <div class="project-info">
+                     <h3>Request of Use</h3>
+                     <p>A secure, role-based web app for managing room and vehicle reservations. Includes a calendar UI, admin dashboard, OTP login, CRUD functions, PDF reports, and user account settings.</p>
+                     <br>
+                     <p><strong>Tech:</strong> PHP, HTML, CSS, Laravel Framework</p>
+                     <a href="https://github.com/an6st/ictms-request" target="_blank">Github Repository ➤</a>
+                  </div>
+               </div>
+               <div class="project-card">
+                  <img src="nyan.png" alt="Project 3 screenshot" class="project-image">
+                  <div class="project-info">
+                     <h3>Nyan Pop</h3>
+                     <p>A calming ASMR-inspired web app where users release anxious thoughts by popping bubbles that contain their overthinking words guided by a mermaid cat companion.</p>
+                     <br>
+                     <p><strong>Tech:</strong> HTML, CSS, JavaScript</p>
+                     <a href="https://github.com/li0ly0/Nyan-Pop" target="_blank">Github Repository ➤</a>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+
+         <!-- CONTACT TAB -->
+         <section id="contact" class="tab-content">
+            <section class="contact-container pixel-border">
+               <h1 class="pixel-heading">Let’s Connect ✉️</h1>
+               <p class="contact-text">If you want to <span class="highlight">request files</span>, <span class="highlight">commission landing pages</span>, or just <span class="highlight">chat and get to know me</span>, feel free to message me on my socials below!</p>
+               <br>
+               <p class="contact-text"><strong>🌟 But I prefer email:</strong><br>
+                  <a class="email-link" 
+                     href="https://mail.google.com/mail/?view=cm&fs=1&to=beverlycionrespecia@gmail.com" 
+                     target="_blank" 
+                     rel="noopener noreferrer">
+                  Send Message
+                  </a>
+               </p>
+               <div class="social-icons">
+                  <a href="https://web.facebook.com/strawverly0/" target="_blank" title="Twitter"><i class="fab fa-facebook"></i></a>
+                  <a href="https://github.com/li0ly0" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                  <a href="https://www.instagram.com/bevy_dump/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                  <a href="https://www.linkedin.com/in/beverly-consolacion-a2695b370/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+               </div>
+            </section>
+         </section>
+      </div>
+      <footer>
+         <p>© 2025 Lily’s Digital Portfolio — made with <span style="color: #ffcc00">★</span> & pixels</p>
+      </footer>
+
+
+      <audio id="click-sound" src="click.mp3" preload="auto"></audio>
+      <audio id="skill-hover-sound" src="skill-hover.mp3" preload="auto"></audio>
+      <script>
+         document.addEventListener('DOMContentLoaded', () => {
+           const musicToggle = document.getElementById('music-toggle');
+           const musicIcon = document.getElementById('music-icon');
+           const bgMusic = document.getElementById('bg-music');
+           const hoverSound = document.getElementById('hover-sound');
+           const skillHoverSound = document.getElementById('skill-hover-sound');
+           const clickSound = document.getElementById('click-sound');
+         
+           // MUSIC: Try autoplay with full volume
+           bgMusic.volume = 0.2;
+           skillHoverSound.volume = 0.100; // or 0.1 for ultra soft
+           const playPromise = bgMusic.play();
+         
+           if (playPromise !== undefined) {
+             playPromise
+               .then(() => {
+                 musicIcon.classList.remove('fa-volume-mute');
+                 musicIcon.classList.add('fa-volume-up');
+               })
+               .catch(() => {
+                 musicIcon.classList.remove('fa-volume-up');
+                 musicIcon.classList.add('fa-volume-mute');
+               });
+           }
+         
+           // PLAY CLICK SOUND
+           function playClick() {
+             clickSound.currentTime = 0;
+             clickSound.play();
+           }
+         
+           // MUSIC: Toggle mute/unmute
+           musicToggle.addEventListener('click', () => {
+             playClick();
+             if (bgMusic.paused) {
+               bgMusic.play();
+               musicIcon.classList.remove('fa-volume-mute');
+               musicIcon.classList.add('fa-volume-up');
+             } else {
+               bgMusic.pause();
+               musicIcon.classList.remove('fa-volume-up');
+               musicIcon.classList.add('fa-volume-mute');
+             }
+           });
+         
+           // HOVER SOUND: tabs & project cards (not skills)
+           const genericHoverables = document.querySelectorAll('.tab, .project-card');
+           genericHoverables.forEach(el => {
+             el.addEventListener('mouseenter', () => {
+               hoverSound.currentTime = 0;
+               hoverSound.play();
+             });
+           });
+         
+           // SPECIAL HOVER SOUND: skills
+           const skillButtons = document.querySelectorAll('.skill-button');
+           skillButtons.forEach(el => {
+             el.addEventListener('mouseenter', () => {
+               skillHoverSound.currentTime = 0;
+               skillHoverSound.play();
+             });
+           });
+         
+           // TABS: Switching logic with click sound
+           const tabs = document.querySelectorAll('.tab');
+           const contents = document.querySelectorAll('.tab-content');
+         
+           tabs.forEach(tab => {
+             tab.addEventListener('click', () => {
+               playClick();
+               tabs.forEach(t => t.classList.remove('active'));
+               contents.forEach(c => c.classList.remove('active'));
+         
+               tab.classList.add('active');
+               const targetId = tab.getAttribute('data-target');
+               document.getElementById(targetId).classList.add('active');
+             });
+           });
+         
+           // Project & Contact links: Play click sound
+           document.querySelectorAll('.project-card a, .contact-container a').forEach(link => {
+             link.addEventListener('click', playClick);
+           });
+         });
+         
+         // External tab link support
+         function showTab(targetId) {
+           const tabs = document.querySelectorAll('.tab');
+           const contents = document.querySelectorAll('.tab-content');
+         
+           tabs.forEach(tab => {
+             tab.classList.remove('active');
+             if (tab.dataset.target === targetId) tab.classList.add('active');
+           });
+         
+           contents.forEach(content => content.classList.remove('active'));
+           document.getElementById(targetId).classList.add('active');
+         
+           // Play click sound when opening tab externally
+           const clickSound = document.getElementById('click-sound');
+           if (clickSound) {
+             clickSound.currentTime = 0;
+             clickSound.play();
+           }
+         }
+      </script>
+   </body>
+</html>
